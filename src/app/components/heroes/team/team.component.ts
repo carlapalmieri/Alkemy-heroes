@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroesService } from 'src/app/services/heroes.service';
 
 @Component({
   selector: 'app-team',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  constructor(private heroesservice: HeroesService ) { }
+
+  hero: any;
 
   ngOnInit(): void {
+    this.heroesservice.getHeroById(1).subscribe(
+      res => {
+      this.hero = res
+      console.log(res)
+    },
+    err => console.log(err))
   }
 
 }

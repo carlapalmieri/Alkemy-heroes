@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+:root {
+    --lightGreen        :#00BF9A;
+    --darkGreen        :#008975;
+}
