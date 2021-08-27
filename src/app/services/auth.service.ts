@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,25 @@ export class AuthService {
   }
 
   logout() {
-    localStorage.removeItem('token');
-    this.router.navigate(['/login'])
+    Swal.fire({
+      title: 'Estás seguro de que quieres cerrar sesión?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'No',
+      confirmButtonText: 'Si'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Cerraste sesión',
+          showConfirmButton: false,
+          timer: 800
+        })
+        localStorage.removeItem('token');
+        this.router.navigate(['/login']);
+      }
+    })
   }
 }

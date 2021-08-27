@@ -85,7 +85,7 @@ export class TeamService {
           icon: 'success',
           title: 'Héroe añadido',
           showConfirmButton: false,
-          timer: 1500
+          timer: 1000
         })
       } else {
         if(this.orientation(hero) === "bad" && this.badCount() < 3) {
@@ -95,7 +95,7 @@ export class TeamService {
             icon: 'success',
             title: 'Villano añadido',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1000
           })
         } else {
           if(this.orientation(hero) === "good") {
@@ -103,14 +103,14 @@ export class TeamService {
               icon: 'error',
               title: 'Ya tienes 3 héroes en tu equipo',
               showConfirmButton: false,
-              timer: 1500
+              timer: 1000
             })
           } else {
             Swal.fire({
             icon: 'error',
             title: 'Ya tienes 3 villanos en tu equipo',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1000
             })
           }
           
@@ -122,14 +122,14 @@ export class TeamService {
           icon: 'error',
           title: 'Este héroe ya está en tu equipo',
           showConfirmButton: false,
-          timer: 1500
+          timer: 1000
         })
       } else {
         Swal.fire({
           icon: 'error',
           title: 'El equipo ya esta lleno',
           showConfirmButton: false,
-          timer: 1500
+          timer: 1000
         })
       }
     }
