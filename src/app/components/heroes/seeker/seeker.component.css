@@ -1,0 +1,69 @@
+.search_container {
+    width: 100%;
+}
+
+.search_name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header {
+    background-color: var(--darkGreen);
+    color: white;
+}
+
+label {
+    text-align: center;
+}
+
+input, label {
+    width: 90%;
+    margin: 0.5rem;
+}
+
+input {
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 30px;
+    border-color: rgba(0, 0, 0, 0.245) !important;
+    color: rgba(0, 0, 0, 0.762);
+}
+
+input:focus {
+    outline: none;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+.hero-card {
+    border: 1px solid rgba(0, 0, 0, 0.993);
+}
+
+.img-container {
+    width: 100%;
+    overflow: hidden;
+    background-image: url(../../../../images/img-not-found.jpg);
+    background-size: cover;
+    min-height: 200px;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+.card-body {
+    background-color: white;
+}

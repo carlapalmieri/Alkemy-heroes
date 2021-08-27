@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     font-family: 'Varela Round', sans-serif;
+    background-color: rgba(0, 0, 0, 0.102);
 }
 
 :root {
     --lightGreen        :#00BF9A;
     --darkGreen        :#008975;
+    --primary        :#008975;
 }

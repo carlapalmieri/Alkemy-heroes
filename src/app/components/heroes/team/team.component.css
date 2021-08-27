@@ -1,0 +1,38 @@
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+.hero-card {
+    border: 1px solid rgba(0, 0, 0, 0.993);
+    background-color: white;
+    padding: 0px;
+}
+
+.img-container {
+    width: 100%;
+    overflow: hidden;
+    background-image: url(../../../../images/img-not-found.jpg);
+    background-size: cover;
+    min-height: 200px;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+.card-header {
+    background-color: var(--darkGreen);
+    color: white;
+}
+
+.powerstats {
+    font-size: 15px;
+}

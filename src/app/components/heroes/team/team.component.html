@@ -1,1 +1,57 @@
-<p>team works!</p>
+<div class="container">
+    <div class="row text-center justify-content-center">
+        <div class="card p-0" style="width: 80%;">
+            <div class="card-header">
+                <h3 class="m-0">Mi equipo</h3>
+            </div>
+            <div class="card-body">
+              <div class="row justify-content-between">
+                  <div class="col">Combate: {{powerstats.combat}}</div>
+                  <div class="col">Inteligencia: {{powerstats.intelligence}}</div>
+                  <div class="col">Poder: {{powerstats.power}}</div>
+                  <div class="col">Velocidad: {{powerstats.speed}}</div>
+                  <div class="col">Fuerza: {{powerstats.strength}}</div>
+                  <div class="col">Durabilidad: {{powerstats.durability}}</div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="row cards-container">
+        <div class="col-10 col-sm-5 col-md-3 col-xl-2 m-2 hero-card" *ngFor="let hero of heroes">
+            <div class="text-center">
+                <div class="card-header">
+                    {{ hero.name }}
+                </div>
+                <div class="img-container">
+                <img [src]="hero.image.url" class="card-img-top" alt="" srcset=""> 
+                </div>
+            <div class="card-body bg-white p-2">
+                <div class="col powerstats">
+                    Combate: {{hero.powerstats.combat}}
+                </div>
+                <div class="col powerstats">
+                        Inteligencia: {{hero.powerstats.intelligence}}
+                    </div>
+                    <div class="col powerstats">
+                        Poder: {{hero.powerstats.power}}
+                    </div>
+                    <div class="col powerstats">
+                        Velocidad: {{hero.powerstats.speed}}
+                    </div>
+                    <div class="col powerstats">
+                        Fuerza: {{hero.powerstats.strength}}
+                    </div>
+                    <div class="col powerstats">
+                        Durabilidad: {{hero.powerstats.durability}}
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" [routerLink]="['/heroes', hero.id]">
+                        Detalles
+                    </button>
+                    <button type="button" class="btn btn-danger btn-block" (click)="deleteHero(hero)">
+                        Eliminar
+                    </button>
+            </div>
+            </div>  
+        </div>
+    </div>
+</div>

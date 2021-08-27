@@ -13,6 +13,7 @@ import { DetailsComponent } from './components/heroes/details/details.component'
 import { AuthGuard } from './services/auth.guard';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './components/heroes/card/card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     TeamComponent,
     SeekerComponent,
-    DetailsComponent
+    DetailsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

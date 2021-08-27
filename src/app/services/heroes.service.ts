@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import axios from 'axios';
+import { Observable } from 'rxjs';
+import { Hero } from '../shared/hero';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +20,11 @@ export class HeroesService {
   //   }).catch(function (err) { console.log(err)} )
   // }
 
-  getHeroById(id: number) {
-    return this.http.get(`${this.API}/${id}`)
+  getHeroByIdService(id: number){
+    return this.http.get<Hero>(`${this.API}/${id}`)
+  }
+
+  searchHero(name: string) {
+    return this.http.get(`${this.API}/search/${name}`)
   }
 }
