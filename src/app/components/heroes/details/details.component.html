@@ -11,22 +11,22 @@
                 <div class="col-5">
                     <div class="col bg-white p-2">
                         <div class="col powerstats p-2">
-                            Peso: {{hero.powerstats.combat}}
+                            Peso: {{hero.appearance.weight[1]}}
                         </div>
                         <div class="col powerstats p-2">
-                            Altura: {{hero.powerstats.intelligence}}
+                            Altura: {{hero.appearance.height[1]}}
                         </div>
                         <div class="col powerstats p-2">
-                            Alias: {{hero.powerstats.power}}
+                            Alias: {{hero.biography.aliases}}
                         </div>
                         <div class="col powerstats p-2">
-                            Color de ojos: {{hero.powerstats.speed}}
+                            Color de ojos: {{hero.appearance['eye-color']}}
                         </div>
                         <div class="col powerstats p-2">
-                            Color de cabello: {{hero.powerstats.strength}}
+                            Color de cabello: {{hero.appearance['hair-color']}}
                         </div>
                         <div class="col powerstats p-2">
-                            Lugar de trabajo: {{hero.powerstats.durability}}
+                            Lugar de trabajo: {{hero.work.base}}
                         </div>
                         <button type="button" class="btn btn-success btn-block m-2" (click)="addToTheTeam(hero)">
                             Añadir al equipo
